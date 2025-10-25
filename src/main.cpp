@@ -8,15 +8,23 @@ int main()
 {
 	Rectangle r1(3, 6);
 	Rectangle r2(3, 6);
+	Rectangle r3;
+	Rectangle r4;
 
 	if (r1 == r2)
 	{
-		std::cout << "=\n";
+		std::cout << "r1 is equal to r2\n";
 	}
 	else
 	{
-		std::cout << "!=\n";
+		std::cout << "r1 is not equal to r2\n";
 	}
+
+	r3 = Rectangle(4, 5);
+	std::cout << "r3 after moving from temporary Rectangle(4,5): " << r3 << std::endl;
+
+	r4 = r1;
+	std::cout << "r4 after copying from r1: " << r4 << std::endl;
 
 	FigureArray array;
 
